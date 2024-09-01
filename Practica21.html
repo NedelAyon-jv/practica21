@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar sencillo</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000px" height="1000px"></canvas>
+    <script type="text/javascript">
+        const myCanvas = document.getElementById("canvas");
+        const ctx = myCanvas.getContext("2d");
+
+
+        ctx.fillStyle = "#819a7f";
+        ctx.fillRect(0, 0, 220, 340);
+
+        ctx.beginPath();
+        ctx.moveTo(20, 50);
+        ctx.bezierCurveTo(20, 30, 180, 30, 180, 50);
+        ctx.lineTo(180, 150); 
+        ctx.bezierCurveTo(180, 180, 20, 180, 20, 150); 
+        ctx.lineTo(20, 50); 
+        ctx.fillStyle = "#000000"; 
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(100, 120, 80, 0, Math.PI * 2, true);
+        ctx.fillStyle = "#FFCC99";
+        ctx.fill();
+        ctx.stroke();
+        
+
+        
+        ctx.beginPath();
+        ctx.arc(70, 80, 10, 0, Math.PI * 2, true);
+        ctx.arc(130, 80, 10, 0, Math.PI * 2, true);
+        ctx.fillStyle = "#000000";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(70, 80, 15, 0, Math.PI * 2, true)
+        ctx.arc(130, 80, 15, 0, Math.PI * 2, true);
+        ctx.fillStyle = "#FFFFFFF";
+        ctx.fill();
+
+        
+        ctx.beginPath();
+        ctx.arc(100, 130, 45, 1, Math.PI, false);
+        ctx.stroke();
+        
+
+       //ctx.beginPath();
+        ctx.fillStyle = "#4CAF50";
+        ctx.fillRect(30, 200, 140, 120);
+        //ctx.stroke();
+
+        
+       
+            
+        
+    </script>
+</body>
+
+</html>
